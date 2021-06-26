@@ -29,6 +29,16 @@
       "mobileNo": "45",
       "email": "fl;kmed",
       "roleId": 0
+    },
+    {
+      "id": 4,
+      "firstName": "VARUNKUMAR",
+      "lastName": "PERIYASAMY",
+      "login": "admin",
+      "password": "aefdsadf",
+      "mobileNo": "09489453999",
+      "email": "rsaranrajrps@gmail.com",
+      "roleId": 500
     }
   ]
 }
