@@ -4,21 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { RegisterComponent } from './register/register.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent,
     LoginComponent,
+    MenuBarComponent,
     RegisterComponent,
-    PagenotfoundComponent
+    PageNotFoundComponent,
+    ProductComponent,
+    UpdateuserComponent,
+
   ],
   imports: [
     BrowserModule,

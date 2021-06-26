@@ -1,11 +1,13 @@
+import { AbstractClassPart } from "@angular/compiler/src/output/output_ast";
+
 export class User {
-    id:number=0;
+    
     firstName:string='';
     lastName:string='';
-    login:string='';
+    loginId:string='';
     password:string='';
     mobileNo:string='';
-    email:string='';
+    emailId:string='';
     roleId:number=0;
 
 }

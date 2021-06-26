@@ -1,21 +1,22 @@
-<body>
+<body >
+    <link rel="stylesheet" href="register.component.css">
+    <section class="From my-4 mx-5">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-5">
+                    <img src="./assets/food.png"  alt="food">
+                </div>
+                <div class="col-lg-7 px-5 py-5">
+                    <h1 class="font-weight-bold-py-3">Welcome to E-Grocery store</h1>
+                    <h4>Create Account here...</h4> E-Grocery
+  
     <form #Form=ngForm (ngSubmit)="onSubmit()">
         <table>
-              <!-- <tr>
-                <td>Id</td>
-                <td>
-                    <input id="id" name="id" [(ngModel)]="userObj.id" type="number" #idcontrol='ngModel' />
-                   
-                </td>
-                <span *ngIf="idcontrol.invalid && idcontrol.touched"> ID is required</span>
-            </tr> 
-        -->
-
-
             <tr>
                 <td>First Name</td>
+                    
                 <td>
-                    <input required id="firstName" name="firstName" [(ngModel)]="userObj.firstName" type="text" #fnamecontrol='ngModel' />
+                    <input required id="firstName" name="firstName" [(ngModel)]="userObj.firstName" class="form-control my-3 p-1" type="text" #fnamecontrol='ngModel' />
                     </td>
                 
                 <span *ngIf="fnamecontrol.invalid && fnamecontrol.touched"> FirstName is required</span>
@@ -24,7 +25,7 @@
             <tr>
                 <td>Last Name</td>
                 <td>
-                    <input required id="lastName" name="lastName" [(ngModel)]="userObj.lastName" type="text" #lnamecontrol='ngModel' />
+                    <input required id="lastName" name="lastName" [(ngModel)]="userObj.lastName" class="form-control my-3 p-1" type="text" #lnamecontrol='ngModel' />
                  </td>
                 <span *ngIf="lnamecontrol.invalid && lnamecontrol.touched"> LastName is required</span>
             </tr>
@@ -32,7 +33,7 @@
             <tr>
                 <td>LoginId</td>
                 <td>
-                    <input required id="login" name="login" [(ngModel)]="userObj.login" type="text" #logincontroller='ngModel' />
+                    <input required id="login" name="loginId" [(ngModel)]="userObj.loginId" class="form-control my-3 p-1" type="text" #logincontroller='ngModel' />
                 </td>
                 <span *ngIf="logincontroller.invalid && logincontroller.touched"> Login is required</span>
             </tr>
@@ -40,7 +41,7 @@
             <tr>
                 <td>password</td>
                 <td>
-                    <input required id="password" name="password" [(ngModel)]="userObj.password" type="text" #passwordcontroller='ngModel' />
+                    <input required id="password" name="password" [(ngModel)]="userObj.password" class="form-control my-3 p-1" type="text" #passwordcontroller='ngModel' />
                 </td>
                 <span *ngIf="passwordcontroller.invalid && passwordcontroller.touched"> password is required</span>
             </tr>
@@ -48,7 +49,7 @@
             <tr>
                 <td>mobileNo</td>
                 <td>
-                    <input required id="mobileNo" name="mobileNo" [(ngModel)]="userObj.mobileNo" type="text" #mobilenocontroller='ngModel' />
+                    <input required id="mobileNo" name="mobileNo" [(ngModel)]="userObj.mobileNo" class="form-control my-3 p-1" type="text" #mobilenocontroller='ngModel' />
                 </td>
                 <span *ngIf="mobilenocontroller.invalid && mobilenocontroller.touched"> mobile no is required</span>
             </tr>
@@ -56,7 +57,7 @@
             <tr>
                 <td>email</td>
                 <td>
-                    <input required id="email" name="email" [(ngModel)]="userObj.email" type="email" />
+                    <input required id="email" name="email" [(ngModel)]="userObj.emailId" class="form-control my-3 p-1" type="email" />
                 </td>
             </tr>
 
@@ -64,16 +65,20 @@
               <tr>
                 <td>roleId</td>
                 <td>
-                    <input required id="roleid" name="roleid" [(ngModel)]="userObj.roleId" type="number" #rolecontroller='ngModel'  />
+                    <input required id="roleid" name="roleid" [(ngModel)]="userObj.roleId" type="number" class="form-control my-3 p-1" #rolecontroller='ngModel'  />
                      <span *ngIf="rolecontroller.invalid && rolecontroller.touched"> ID is required</span> 
                 </td>
             </tr>
 
             <tr>
-                <input type="submit" value="REGISTER">
+                <input type="submit" class="btn1 mt-3 mb-5"  value="REGISTER">
               </tr>
 
 
              </table>
     </form>
+                </div>
+                </div>
+                </div>
+    </section>
 </body>
