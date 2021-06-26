@@ -39,6 +39,16 @@
       "mobileNo": "09489453999",
       "email": "rsaranrajrps@gmail.com",
       "roleId": 500
+    },
+    {
+      "id": 5,
+      "firstName": "hgvhv",
+      "lastName": "jhbj",
+      "login": "admi",
+      "password": "aefdsadf",
+      "mobileNo": "09489453999",
+      "email": "rsaranrajrps@gmail.com",
+      "roleId": 50
     }
   ]
 }
