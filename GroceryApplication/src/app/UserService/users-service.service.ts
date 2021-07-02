@@ -23,9 +23,17 @@ export class UsersServiceService {
   alert(JSON.stringify(this.msg));
   return this.msg;
     }
+
     loginCheck(userobject:User):Observable<string | User>
     {
       return this.http.get<string | User>(this.restApiUrl+"/authuser/"+ userobject.loginId+"/"+userobject.password,{  responseType: 'text' as 'json'  });
     }
-    
-  }
+    getAllUsers():Observable<User>{
+      return this.http.get<User>(this.restApiUrl+'/alluser');
+      }
+     
+        deleteUser1(id:Number):Observable<User>{
+          return this.http.delete<any>(this.restApiUrl+"/"+id);
+          }
+      }
+      

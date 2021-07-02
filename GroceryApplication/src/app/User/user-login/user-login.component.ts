@@ -28,7 +28,7 @@ export class UserLoginComponent implements OnInit {
     }​​​​​​​​, error=> {​​​​​​​​ 
   console.log(error.error);
   this.error = error.error;
-        ;
+        
     }​​​​​​​​);
     }​​​​​​​​
   

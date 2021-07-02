@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from 'src/app/UserModel/user.model';
+import { UsersServiceService } from 'src/app/UserService/users-service.service';
 
 @Component({
   selector: 'app-user-detail',
@@ -6,10 +9,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
+  userList1:User[]=[];
+  constructor(private service:UsersServiceService,private router:Router) {
 
-  constructor() { }
+   }
+  ngOnInit(){
+    this.loadData();
 
-  ngOnInit(): void {
   }
+loadData(){
+ this.service.getAllUsers().subscribe(
+   (data:any)=>{
+     this.userList1=data;
+     alert(JSON.stringify(data));
+   }
+ );
 
+// deleteUser1(id:Number):void{
+// let allow=confirm("Are you sure want to delete this user with id: "+id);
+// if(allow == true){
+// this.service.deleteUser1(id).subscribe(
+//   (data:any)=>{
+//     alert("Deleted !!!")
+//   }
+// );
+
+// }
+
+// }
+}
 }
