@@ -14,6 +14,7 @@ import { ProductCRUDComponent } from './Product/product-crud/product-crud.compon
 import { ProductListComponent } from './Product/product-list/product-list.component';
 import { BookProductComponent } from './Order/book-product/book-product.component';
 import { OrderListComponent } from './Order/order-list/order-list.component';
+import { MenubarComponent } from './menubar/menubar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { OrderListComponent } from './Order/order-list/order-list.component';
     ProductCRUDComponent,
     ProductListComponent,
     BookProductComponent,
-    OrderListComponent
+    OrderListComponent,
+    MenubarComponent
   ],
   imports: [
     BrowserModule,

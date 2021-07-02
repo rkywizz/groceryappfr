@@ -12,67 +12,84 @@
   
     <form #Form=ngForm (ngSubmit)="onSubmit()">
         <table>
+
             
             <tr>
-                <td>First Name</td>
+                <td for="firstname">First Name</td>
                     
                 <td>
-                    <input required id="firstName" name="firstName" [(ngModel)]="userObj.firstName" class="form-control my-3 p-1" type="text" #fnamecontrol='ngModel' />
+                    <input required id="firstname" name="firstname" [(ngModel)]="userObj.firstName" 
+                    class="form-control my-3 p-1" type="text"  pattern="^[a-zA-Z]+$"  maxlength="12" #firstname="ngModel" />
+                    <span *ngIf="firstname.invalid && (firstname.touched || firstname.dirty)"
+                     class="alert alert-danger"> FirstName is required</span>
                     </td>
                 
-                <span *ngIf="fnamecontrol.invalid && fnamecontrol.touched"> FirstName is required</span>
+               
+                
             </tr>
 
             <tr>
                 <td>Last Name</td>
                 <td>
-                    <input required id="lastName" name="lastName" [(ngModel)]="userObj.lastName" class="form-control my-3 p-1" type="text" #lnamecontrol='ngModel' />
+                    <input required id="lastName" name="lastName" [(ngModel)]="userObj.lastName" 
+                    class="form-control my-3 p-1" type="text" pattern="^[a-zA-Z]+$" maxlength="12" #lnamecontrol='ngModel' />
+                    <span *ngIf="lnamecontrol.invalid && lnamecontrol.touched"  class="alert alert-danger"> LastName is required</span>
                  </td>
-                <span *ngIf="lnamecontrol.invalid && lnamecontrol.touched"> LastName is required</span>
+               
             </tr>
 
             <tr>
                 <td>LoginId</td>
                 <td>
-                    <input required id="login" name="loginId" [(ngModel)]="userObj.loginId" class="form-control my-3 p-1" type="text" #logincontroller='ngModel' />
+                    <input required id="login" name="loginId" [(ngModel)]="userObj.loginId" 
+                    class="form-control my-3 p-1" type="text" #logincontroller='ngModel' />
+                    <span *ngIf="logincontroller.invalid && logincontroller.touched" class="alert alert-danger"> Login is required</span>
                 </td>
-                <span *ngIf="logincontroller.invalid && logincontroller.touched"> Login is required</span>
+                
             </tr>
 
             <tr>
-                <td>password</td>
+                <td>Password</td>
                 <td>
-                    <input required id="password" name="password" [(ngModel)]="userObj.password" class="form-control my-3 p-1" type="text" #passwordcontroller='ngModel' />
+                    <input required id="password" name="password" [(ngModel)]="userObj.password" 
+                    class="form-control my-3 p-1" type="text" #passwordcontroller='ngModel' />
+                    <span *ngIf="passwordcontroller.invalid && passwordcontroller.touched" class="alert alert-danger"> password is required</span>
                 </td>
-                <span *ngIf="passwordcontroller.invalid && passwordcontroller.touched"> password is required</span>
+                
             </tr>
 
             <tr>
-                <td>mobileNo</td>
+                <td>Mobile No</td>
                 <td>
-                    <input required id="mobileNo" name="mobileNo" [(ngModel)]="userObj.mobileNo" class="form-control my-3 p-1" type="text" #mobilenocontroller='ngModel' />
+                    <input required id="mobileNo" name="mobileNo" [(ngModel)]="userObj.mobileNo" 
+                    class="form-control my-3 p-1" type="text" #mobilenocontroller='ngModel' />
+                    <span *ngIf="mobilenocontroller.invalid && mobilenocontroller.touched" 
+                    class="alert alert-danger"> mobile no is required</span>
                 </td>
-                <span *ngIf="mobilenocontroller.invalid && mobilenocontroller.touched"> mobile no is required</span>
+               
             </tr>
 
             <tr>
-                <td>email</td>
+                <td>Email</td>
                 <td>
-                    <input required id="email" name="email" [(ngModel)]="userObj.emailId" class="form-control my-3 p-1" type="email" />
+                    <input required id="email" name="email" [(ngModel)]="userObj.emailId" 
+                    class="form-control my-3 p-1" type="email" #emailcontroller='ngModel' />
+                    <span *ngIf="emailcontroller.invalid && emailcontroller.touched" 
+                    class="alert alert-danger"> E-mail is required</span>
                 </td>
             </tr>
 
            
-              <tr>
+              <!-- <tr>
                 <td>roleId</td>
                 <td>
                     <input required id="roleid" name="roleid" [(ngModel)]="userObj.roleId" type="number" class="form-control my-3 p-1" #rolecontroller='ngModel'  />
                      <span *ngIf="rolecontroller.invalid && rolecontroller.touched"> ID is required</span> 
                 </td>
-            </tr>
+            </tr> -->
 
             <tr>
-                <input type="submit" class="btn1 mt-3 mb-5"  value="REGISTER">
+                <input type="submit" [disabled]="!Form.form.valid" class="btn1 mt-3 mb-5"  value="REGISTER">
               </tr>
 
 

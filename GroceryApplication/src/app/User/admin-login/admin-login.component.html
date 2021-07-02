@@ -1,1 +1,55 @@
-<p>admin-login works!</p>
+
+<body>
+    <link rel="stylesheet" href="admin-login.component.css">
+    <section class="From my-4 mx-5">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-5">
+                    <img  src="./assets/food.png"class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-7 px-5 py-5">
+                    <h1 class="font-weight-bold-py-3">Welcome to E-Grocery store</h1>
+                    <h4>Sign in to your account</h4>
+                    <form #Form=ngForm (ngSubmit)="onSubmit()">
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <input required id="rollid" class="form-control my-3 p-4" 
+                                name="login" [(ngModel)]="userObj.roleId" type="text" 
+                                #logincontroller='ngModel'placeholder="RoleId" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <input required id="login" class="form-control my-3 p-4" 
+                                name="login" [(ngModel)]="userObj.loginId" type="text" 
+                                #logincontroller='ngModel'placeholder="LoginId" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <input required id="password" name="password" placeholder="Password"
+                                 class="form-control my-3 p-4" [(ngModel)]="userObj.password" type="text" 
+                                 #passwordcontroller='ngModel' />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <button type="submit" class="btn btn-primary" [disabled]="Form.invalid" 
+                                class="btn1 mt-3 mb-5">Login</button>
+                            </div>
+                        </div>
+                        <a href="#">Forgot Password</a>
+                        <p>Don't have an account ? <a routerLink='/registeradmin'>Register here</a> </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+
+
+
+
+
+
+
