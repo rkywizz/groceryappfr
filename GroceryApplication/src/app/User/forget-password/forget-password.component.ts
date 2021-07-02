@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from 'src/app/UserModel/user.model';
+import { UsersServiceService } from 'src/app/UserService/users-service.service';
 
 @Component({
   selector: 'app-forget-password',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forget-password.component.css']
 })
 export class ForgetPasswordComponent implements OnInit {
-
-  constructor() { }
+  userObj:User;
+  constructor(private router:Router,private service:UsersServiceService) {
+    this.userObj=new User();
+   }
 
   ngOnInit(): void {
   }
-
 }
