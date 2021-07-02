@@ -15,6 +15,7 @@ import { ProductListComponent } from './Product/product-list/product-list.compon
 import { BookProductComponent } from './Order/book-product/book-product.component';
 import { OrderListComponent } from './Order/order-list/order-list.component';
 import { MenubarComponent } from './menubar/menubar.component';
+import { ChangePasswordComponent } from './User/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MenubarComponent } from './menubar/menubar.component';
     ProductListComponent,
     BookProductComponent,
     OrderListComponent,
-    MenubarComponent
+    MenubarComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
