@@ -9,6 +9,7 @@ import { UserLoginComponent } from './User/user-login/user-login.component';
 const routes: Routes = [
   {path:'registercustomer',component:RegisterCustomerComponent},
   {path:'registeradmin',component:RegisterAdminComponent},
+  {path:'registeruser',component:RegisterCustomerComponent},
   {path:'loginadmin',component:AdminLoginComponent},
   {path:'productlist',component:ProductListComponent},
   {path:'loginuser',component:UserLoginComponent}
