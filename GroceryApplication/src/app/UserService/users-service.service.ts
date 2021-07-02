@@ -23,5 +23,9 @@ export class UsersServiceService {
   alert(JSON.stringify(this.msg));
   return this.msg;
     }
+    loginCheck(userobject:User):Observable<string | User>
+    {
+      return this.http.get<string | User>(this.restApiUrl+"/authuser/"+ userobject.loginId+"/"+userobject.password,{  responseType: 'text' as 'json'  });
+    }
     
   }
