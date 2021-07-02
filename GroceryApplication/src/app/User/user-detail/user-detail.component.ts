@@ -10,6 +10,8 @@ import { UsersServiceService } from 'src/app/UserService/users-service.service';
 })
 export class UserDetailComponent implements OnInit {
   userList1:User[]=[];
+  id:number=0;
+
   constructor(private service:UsersServiceService,private router:Router) {
 
    }
@@ -24,18 +26,16 @@ loadData(){
      alert(JSON.stringify(data));
    }
  );
+  }
+deleteUser1(id:number){
+let allow=confirm("Are you sure want to delete this user with id: "+id);
+if(allow == true){
+this.service.deleteUser1(id).subscribe(
+  (data:any)=>{
+    alert("Deleted !!!")
+  }
+);
 
-// deleteUser1(id:Number):void{
-// let allow=confirm("Are you sure want to delete this user with id: "+id);
-// if(allow == true){
-// this.service.deleteUser1(id).subscribe(
-//   (data:any)=>{
-//     alert("Deleted !!!")
-//   }
-// );
-
-// }
-
-// }
 }
-}
+
+}}

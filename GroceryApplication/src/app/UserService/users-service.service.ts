@@ -33,7 +33,7 @@ export class UsersServiceService {
       }
      
         deleteUser1(id:Number):Observable<User>{
-          return this.http.delete<any>(this.restApiUrl+"/"+id);
+          return this.http.delete<any>(this.restApiUrl+"/delete?id="+id,{  responseType: 'text' as 'json'  });
           }
       }
       
