@@ -35,5 +35,12 @@ export class UsersServiceService {
         deleteUser1(id:Number):Observable<User>{
           return this.http.delete<any>(this.restApiUrl+"/delete?id="+id,{  responseType: 'text' as 'json'  });
           }
+          getUserById(id:number):Observable<User>{
+            return this.http.get<User>(this.restApiUrl+"/bypk/"+id);
+            }
+          updateUser(id:number,user1:User):Observable<User>{
+            return this.http.put<User>(this.restApiUrl+"/update",user1,{  responseType: 'text' as 'json'  });
+            }
+          
       }
       

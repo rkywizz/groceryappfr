@@ -52,7 +52,7 @@
                 <td>Password</td>
                 <td>
                     <input required id="password" name="password" [(ngModel)]="userObj.password" 
-                    class="form-control my-3 p-1" type="text" #passwordcontroller='ngModel' />
+                    class="form-control my-3 p-1" type="password" #passwordcontroller='ngModel' />
                     <span *ngIf="passwordcontroller.invalid && passwordcontroller.touched" class="alert alert-danger"> password is required</span>
                 </td>
                 

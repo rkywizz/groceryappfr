@@ -5,6 +5,7 @@ import { AdminLoginComponent } from './User/admin-login/admin-login.component';
 import { ForgetPasswordComponent } from './User/forget-password/forget-password.component';
 import { RegisterAdminComponent } from './User/register-admin/register-admin.component';
 import { RegisterCustomerComponent } from './User/register-customer/register-customer.component';
+import { UpdateUserComponent } from './User/update-user/update-user.component';
 import { UserDetailComponent } from './User/user-detail/user-detail.component';
 import { UserLoginComponent } from './User/user-login/user-login.component';
 
@@ -16,7 +17,9 @@ const routes: Routes = [
   {path:'productlist',component:ProductListComponent},
   {path:'loginuser',component:UserLoginComponent},
   {path:'forget',component:ForgetPasswordComponent},
-  {path:'userlist',component:UserDetailComponent}
+  {path:'userlist',component:UserDetailComponent},
+  {path:'update/:id',component:UpdateUserComponent},
+  
 ];
 
 @NgModule({

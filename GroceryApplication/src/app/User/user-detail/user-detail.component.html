@@ -5,14 +5,15 @@
     <div class="header">
         User List
     </div>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-primary">
         <tr class="table-warning"><th>Login ID</th><th>First Name</th><th>Last Name</th><th>email</th><th>Action</th></tr>
     <tr class="table-danger" *ngFor="let userObj of userList1">
-        <td>{{userObj.loginId}}</td>
-    <td>{{userObj.firstName}}</td>
-    <td>{{userObj.lastName}}</td>
-    <td>{{userObj.emailId}}</td>
-      <td><button (click)="deleteUser1(userObj.id)">Delete</button></td> 
+        <td class="table-primary">{{userObj.loginId}}</td>
+    <td class="table-primary">{{userObj.firstName}}</td>
+    <td class="table-primary">{{userObj.lastName}}</td>
+    <td class="table-primary">{{userObj.emailId}}</td>
+      <td><button (click)="deleteUser1(userObj.id)">Delete</button>
+        <button (click)="editUser(userObj.id)">Edit</button></td> 
     </tr> 
     </table>
     </div>

@@ -16,6 +16,7 @@ import { BookProductComponent } from './Order/book-product/book-product.componen
 import { OrderListComponent } from './Order/order-list/order-list.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { ChangePasswordComponent } from './User/change-password/change-password.component';
+import { UpdateUserComponent } from './User/update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ChangePasswordComponent } from './User/change-password/change-password.
     BookProductComponent,
     OrderListComponent,
     MenubarComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

@@ -27,15 +27,25 @@ loadData(){
    }
  );
   }
+  editUser(id:number){
+    alert(id);
+    this.router.navigate(['update',id]);
+    
+  }
 deleteUser1(id:number){
 let allow=confirm("Are you sure want to delete this user with id: "+id);
 if(allow == true){
 this.service.deleteUser1(id).subscribe(
   (data:any)=>{
     alert("Deleted !!!")
+  
   }
 );
 
 }
+this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this.router.onSameUrlNavigation = 'reload';
+      this.router.navigate(['userlist']);
+
 
 }}
