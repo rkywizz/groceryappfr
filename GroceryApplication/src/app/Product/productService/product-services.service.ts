@@ -26,4 +26,15 @@ export class ProductServicesService {
     getAllProducts():Observable<ProductModel>{
       return this.http.get<ProductModel>(this.restApiUrl+'/allproducts');
       }
-  }
+      getProductById(id:number):Observable<ProductModel>{
+        return this.http.get<ProductModel>(this.restApiUrl+"/bypk/"+id);
+        }
+    
+        updateProduct(id:number,product:ProductModel):Observable<ProductModel>{
+          return this.http.put<ProductModel>(this.restApiUrl+"/update",product,{  responseType: 'text' as 'json'  });
+          }
+          deleteProduct(id:number):Observable<ProductModel>{
+            return this.http.delete<any>(this.restApiUrl+"/delete?id="+id,{  responseType: 'text' as 'json'  });
+            }
+        }
+  

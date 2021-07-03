@@ -30,7 +30,7 @@ loadData(){
 
   showUser(id:number){
     alert(id);
-  this.router.navigate(['details',id]);
+  this.router.navigate(['detailsuser',id]);
   }
 deleteUser1(id:number){
 let allow=confirm("Are you sure want to delete this user with id: "+id);

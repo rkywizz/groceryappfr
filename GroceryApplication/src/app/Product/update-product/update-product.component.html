@@ -1,0 +1,54 @@
+
+
+<form #contactForm="ngForm" >
+ 
+    <table>
+        <tr>
+    
+            <td>  
+               <label for="id">Product id</label>
+            </td>
+            <td>
+               <input type="number" name="id" [(ngModel)]="productObj.id">
+            </td>
+               </tr>
+    
+      <tr>
+    
+      <td>  
+        <label for="name">Product Name</label>
+     </td>
+     <td>
+        <input type="text" name="name" [(ngModel)]="productObj.name">
+     </td>
+        </tr>
+
+  
+        <tr>
+            <td>
+            <label for="price">Price</label>
+          </td>
+          <td>
+            <input type="text" name="price" [(ngModel)]="productObj.price">
+          </td>
+          </tr>
+          <tr>
+    
+            <td>  
+               <label for="quantity">Quantity</label>
+            </td>
+            <td>
+               <input type="number" name="quantity" [(ngModel)]="productObj.quantity">
+            </td>
+               </tr>
+       
+          <tr>
+          <input type="submit" (click)="editProduct()" value="Update">
+          </tr>
+         
+     
+      </table>
+      <div>
+      
+      </div>
+      </form>

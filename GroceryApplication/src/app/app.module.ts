@@ -20,6 +20,7 @@ import { UpdateUserComponent } from './User/update-user/update-user.component';
 import { DetailsComponent } from './User/details/details.component';
 import { MyProfileComponent } from './User/my-profile/my-profile.component';
 import { AddProductComponent } from './Product/add-product/add-product.component';
+import { UpdateProductComponent } from './Product/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AddProductComponent } from './Product/add-product/add-product.component
     UpdateUserComponent,
     DetailsComponent,
     MyProfileComponent,
-    AddProductComponent
+    AddProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,

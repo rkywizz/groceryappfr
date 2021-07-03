@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { ProductCRUDComponent } from './Product/product-crud/product-crud.component';
 import { ProductListComponent } from './Product/product-list/product-list.component';
+import { UpdateProductComponent } from './Product/update-product/update-product.component';
 import { AdminLoginComponent } from './User/admin-login/admin-login.component';
 import { DetailsComponent } from './User/details/details.component';
 import { ForgetPasswordComponent } from './User/forget-password/forget-password.component';
@@ -21,10 +22,12 @@ const routes: Routes = [
   {path:'loginuser',component:UserLoginComponent},
   {path:'forget',component:ForgetPasswordComponent},
   {path:'userlist',component:UserDetailComponent},
-  {path:'update/:id',component:UpdateUserComponent},
-  {path:'details/:id',component:DetailsComponent},
+  {path:'updateuser/:id',component:UpdateUserComponent},
+  {path:'detailsuser/:id',component:DetailsComponent},
   {path:'productcrud',component:ProductCRUDComponent},
-  {path:'productlist',component:ProductListComponent}
+  {path:'productlist',component:ProductListComponent},
+  {path:'updateproduct/:id',component:UpdateProductComponent},
+  {path:'productcrud',component:ProductCRUDComponent}
 
   
 ];
