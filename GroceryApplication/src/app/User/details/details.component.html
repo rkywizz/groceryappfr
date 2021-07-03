@@ -1,4 +1,4 @@
-<p>update-user works!</p>
+<p>details works!</p>
 
 <form #contactForm="ngForm" >
  
@@ -15,23 +15,23 @@
     
       <tr>
     
-     <!-- <td>  
-        <label for="username">First Name</label>
+     <td>  
+        <label for="firstName">First Name</label>
      </td>
      <td>
-        <input type="text" name="username" [(ngModel)]="userObj.firstName">
+        <input type="text" name="firstName" [(ngModel)]="userObj.firstName">
      </td>
         </tr>
 
         <tr>
             <td>  
-               <label for="username">Last Name</label>
+               <label for="lastName">Last Name</label>
             </td>
             <td>
-               <input type="text" name="username" [(ngModel)]="userObj.lastName" />
+               <input type="text" name="lastName" [(ngModel)]="userObj.lastName" />
             </td>
                </tr>
-        -->
+    
 
         <tr>
           <td>
@@ -60,12 +60,17 @@
             <td>
                <input type="text" name="username" [(ngModel)]="userObj.mobileNo">
             </td>
-               </tr>
-       
-          <tr>
-          <input type="submit" (click)="editUser()" value="Update">
-          </tr>
-         
+        </tr>
+
+        <tr>
+        <td>  
+            <label for="roleId">Roll ID</label>
+         </td>
+         <td>
+            <input type="text" name="roleId" [(ngModel)]="userObj.roleId">
+         </td>
+     </tr>
+  
      
       </table>
       <div>

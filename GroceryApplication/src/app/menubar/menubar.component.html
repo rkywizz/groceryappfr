@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-" style="background-color: pink;">
+<nav class="navbar navbar-expand-lg " style="background-color: pink;">
     <div class="container-fluid">
      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,18 +8,25 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li>
           <a class="navbar-brand" href="#">
-            <img src="./assets/logo1.png" alt="Logo" style="width:55px;">
+            <img src="./assets/logo1.png" alt="Logo" style="width:60px;">
           </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" routerLink='/loginadmin'>LoginAdmin</a>
+            <a class="nav-link" href="#" >Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" routerLink='/loginuser'>LoginUser</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sign-In
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" routerLink='/loginuser'>User Login</a>
+              <a class="dropdown-item" href="#" routerLink='/loginadmin'>Admin Login</a>
+            
+            </div>
           </li>
-          
+        
           <li class="nav-item">
-            <a class="nav-link" href="#" routerLink='/registercustomer'>Registercustomer</a>
+            <a class="nav-link" href="#" routerLink='/registercustomer'>Sign-Up</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" routerLink='/productlist'>Product</a>
@@ -27,7 +34,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#" routerLink='/userlist'>Customer Details</a>
           </li>
-        
+         
         </ul>
         
       </div>

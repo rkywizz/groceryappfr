@@ -19,6 +19,7 @@
         img {
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
+            
            
         }
         .btn1 {
@@ -26,7 +27,7 @@
             outline: none;
             height: 50px;
             width: 100%;
-            background-color: greenyellow;
+            background-color: grey;
             color: cornsilk;
             border-radius: 4px;
             font-weight: bold;

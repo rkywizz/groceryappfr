@@ -12,7 +12,9 @@
     <td class="table-primary">{{userObj.firstName}}</td>
     <td class="table-primary">{{userObj.lastName}}</td>
     <td class="table-primary">{{userObj.emailId}}</td>
-      <td><button (click)="deleteUser1(userObj.id)">Delete</button>
+      <td>
+        <button (click)="showUser(userObj.id)">Details</button>  
+        <button (click)="deleteUser1(userObj.id)">Delete</button>
         <button (click)="editUser(userObj.id)">Edit</button></td> 
     </tr> 
     </table>
