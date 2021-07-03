@@ -1,21 +1,22 @@
-<!-- <div class="conatiner">
+ <div class="conatiner">
     <div class="header">
         Product List
     </div>
-    <table class="table table-bordered table-primary">
-        <tr class="table-warning"><th>Product ID</th><th>Code</th><th>Name</th><th>Description</th><th>price</th></tr>
-    <tr class="table-danger" *ngFor="let userObj of userList1">
+    <!-- <table class="table table-bordered table-primary"> -->
+        <!-- <tr class="table-warning"><th>Product ID</th><th>Code</th><th>Name</th><th>Description</th><th>price</th></tr> -->
+    <tr class="table-danger" *ngFor="let productObj of productList">
         <td>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" src="https://sc04.alicdn.com/kf/UTB8L4HPotnJXKJkSaiyq6AhwXXam.jpg" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">{{userObj.loginId}}</h5>
-              <p class="card-text">{{userObj.firstName}}</p>
-              <p class="card-text">{{userObj.emailId}}</p>
+              <h5 class="card-title">{{productObj.name}}</h5>
+              <p class="card-text">{{productObj.code}}</p>
+              <p class="card-text">{{productObj.price}}</p>
+              <p class="card-text">{{productObj.quantity}}</p>
             </div>
           </div>
           </td>
 
     </tr> 
-    </table>
-    </div> -->
+    <!-- </table> -->
+    </div> 

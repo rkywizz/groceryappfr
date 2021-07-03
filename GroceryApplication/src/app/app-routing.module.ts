@@ -23,7 +23,8 @@ const routes: Routes = [
   {path:'userlist',component:UserDetailComponent},
   {path:'update/:id',component:UpdateUserComponent},
   {path:'details/:id',component:DetailsComponent},
-  {path:'productcrud',component:ProductCRUDComponent}
+  {path:'productcrud',component:ProductCRUDComponent},
+  {path:'productlist',component:ProductListComponent}
 
   
 ];

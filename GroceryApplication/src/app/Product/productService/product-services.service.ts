@@ -23,4 +23,7 @@ export class ProductServicesService {
   alert(JSON.stringify(this.msg));
   return this.msg;
     }
+    getAllProducts():Observable<ProductModel>{
+      return this.http.get<ProductModel>(this.restApiUrl+'/allproducts');
+      }
   }
