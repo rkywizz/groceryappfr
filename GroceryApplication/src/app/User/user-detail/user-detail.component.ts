@@ -27,11 +27,7 @@ loadData(){
    }
  );
   }
-  editUser(id:number){
-    alert(id);
-    this.router.navigate(['update',id]);
-    
-  }
+
   showUser(id:number){
     alert(id);
   this.router.navigate(['details',id]);

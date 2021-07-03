@@ -1,0 +1,73 @@
+<form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+ 
+    <table>
+        <!-- <tr>
+    
+            <td>  
+               <label for="id">Product ID</label>
+            </td>
+            <td>
+               <input type="number" name="id" [(ngModel)]="productObj.id">
+            </td>
+               </tr> -->
+    
+      <tr>
+    
+     <td>  
+        <label for="code">product code</label>
+     </td>
+     <td>
+        <input type="text" name="code" [(ngModel)]="productObj.code">
+     </td>
+        </tr>
+
+        <tr>
+            <td>  
+               <label for="name">Name</label>
+            </td>
+            <td>
+               <input type="text" name="name" [(ngModel)]="productObj.name" />
+            </td>
+               </tr>
+               <tr>
+                  <td>  
+                     <label for="description">Description</label>
+                  </td>
+                  <td>
+                     <input type="text" name="description" [(ngModel)]="productObj.description" />
+                  </td>
+                     </tr>
+          
+
+        <tr>
+          <td>
+          <label for="price">Price</label>
+        </td>
+        <td>
+          <input type="text" name="price" [(ngModel)]="productObj.price">
+          </td>
+          
+        
+        </tr>
+
+          
+        <tr>
+            <td>
+            <label for="quantity">Quantity</label>
+          </td>
+          <td>
+            <input type="number" name="quantity" [(ngModel)]="productObj.quantity">
+          </td>
+          </tr>
+         
+          <tr>
+            <input type="submit" [disabled]="!contactForm.form.valid" class="btn1 mt-3 mb-5"  value="ADD">
+          </tr>
+
+         
+     
+      </table>
+      <div>
+      
+      </div>
+      </form>

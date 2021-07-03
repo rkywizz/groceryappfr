@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddProductComponent } from './Product/add-product/add-product.component';
 import { ProductCRUDComponent } from './Product/product-crud/product-crud.component';
 import { ProductListComponent } from './Product/product-list/product-list.component';
 import { AdminLoginComponent } from './User/admin-login/admin-login.component';
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path:'registeradmin',component:RegisterAdminComponent},
   {path:'registeruser',component:RegisterCustomerComponent},
   {path:'loginadmin',component:AdminLoginComponent},
-  {path:'productlist',component:ProductListComponent},
+  {path:'addproduct',component:AddProductComponent},
   {path:'loginuser',component:UserLoginComponent},
   {path:'forget',component:ForgetPasswordComponent},
   {path:'userlist',component:UserDetailComponent},

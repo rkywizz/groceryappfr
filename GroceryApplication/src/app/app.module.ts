@@ -18,6 +18,8 @@ import { MenubarComponent } from './menubar/menubar.component';
 import { ChangePasswordComponent } from './User/change-password/change-password.component';
 import { UpdateUserComponent } from './User/update-user/update-user.component';
 import { DetailsComponent } from './User/details/details.component';
+import { MyProfileComponent } from './User/my-profile/my-profile.component';
+import { AddProductComponent } from './Product/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { DetailsComponent } from './User/details/details.component';
     MenubarComponent,
     ChangePasswordComponent,
     UpdateUserComponent,
-    DetailsComponent
+    DetailsComponent,
+    MyProfileComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
