@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BookProductComponent } from './Order/book-product/book-product.component';
+import { OrderListComponent } from './Order/order-list/order-list.component';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { ProductCRUDComponent } from './Product/product-crud/product-crud.component';
 import { ProductListComponent } from './Product/product-list/product-list.component';
@@ -27,7 +29,9 @@ const routes: Routes = [
   {path:'productcrud',component:ProductCRUDComponent},
   {path:'productlist',component:ProductListComponent},
   {path:'updateproduct/:id',component:UpdateProductComponent},
-  {path:'productcrud',component:ProductCRUDComponent}
+  {path:'productcrud',component:ProductCRUDComponent},
+  {path:'order/:pid',component:BookProductComponent},
+  {path:'orderlist',component:OrderListComponent}
 
   
 ];

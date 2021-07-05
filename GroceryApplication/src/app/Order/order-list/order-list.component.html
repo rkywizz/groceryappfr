@@ -1,1 +1,27 @@
-<p>order-list works!</p>
+
+<div class="conatiner">
+    <div class="header">
+        User List
+    </div>
+    <table class="table table-bordered table-primary">
+        <tr class="table-warning"><th>Order ID</th><th>Name</th><th>Address</th><th>Email ID</th><th>productId</th><th>product name</th><th>quantity</th><th>amount</th><th>User Id</th><th>Action</th></tr> 
+    <tr class="table-danger" *ngFor="let OrderObj of orderList">
+        
+         <td class="table-primary">{{OrderObj.id}}</td>
+    <td class="table-primary">{{OrderObj.name}}</td>
+    <td class="table-primary">{{OrderObj.address}}</td>
+    <td class="table-primary">{{OrderObj.emailId}}</td>
+    <td class="table-primary">{{OrderObj.productId}}</td>
+    <td class="table-primary">{{OrderObj.productName}}</td>
+    <td class="table-primary">{{OrderObj.quantity}}</td>
+    <td class="table-primary">{{OrderObj.amount}}</td>
+    <td class="table-primary">{{OrderObj.user.loginId}}</td>
+    
+      <td>
+
+        <!-- <button (click)="showUser(userObj.id)">Details</button>   -->
+        <button (click)="deleteOrder(OrderObj.id)">Cancel</button>
+      
+    </tr> 
+    </table>
+    </div>
