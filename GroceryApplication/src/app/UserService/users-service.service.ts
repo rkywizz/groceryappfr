@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { OrderModel } from '../Order/OrderClass/order-model.model';
 import { User } from '../UserModel/user.model';
 
 @Injectable({
@@ -44,9 +45,12 @@ export class UsersServiceService {
           updateUser(user1:User):Observable<User>{
             return this.http.put<User>(this.restApiUrl+"/update",user1,{  responseType: 'text' as 'json'  });
             }
-            // getAllOrders():Observable<OrderModel>{
-            //   return this.http.get<OrderModel>(this.restApiUrl+'/allOrder');
-            //   }
+             getAllOrders(loginId:string):Observable<OrderModel>{
+              return this.http.get<OrderModel>(this.restApiUrl+'/allorder?userLogin='+loginId);
+               }
+               cancelOrder(id:number):Observable<string>{
+                return this.http.get<string>("http://localhost:8093/Order/cancelorder?id="+id,{  responseType: 'text' as 'json'  });
+                }
           
       }
       

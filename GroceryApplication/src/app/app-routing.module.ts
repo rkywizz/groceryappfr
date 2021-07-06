@@ -12,6 +12,7 @@ import { AdminLoginComponent } from './User/admin-login/admin-login.component';
 import { CustomerDashboardComponent } from './User/customer-dashboard/customer-dashboard.component';
 import { DetailsComponent } from './User/details/details.component';
 import { ForgetPasswordComponent } from './User/forget-password/forget-password.component';
+import { MyOrdersComponent } from './User/my-orders/my-orders.component';
 import { MyProfileComponent } from './User/my-profile/my-profile.component';
 import { RegisterAdminComponent } from './User/register-admin/register-admin.component';
 import { RegisterCustomerComponent } from './User/register-customer/register-customer.component';
@@ -38,7 +39,9 @@ const routes: Routes = [
   {path:'orderlist',component:OrderListComponent},
   {path:'orderdetails/:id',component:OrderDetailsComponent},
   {path:'customerDashboard',component:CustomerDashboardComponent},
-  {path:'myprofile/:loginId',component:MyProfileComponent}
+  {path:'myprofile/:loginId',component:MyProfileComponent},
+  {path:'myorders/:loginId',component:MyOrdersComponent},
+  {path:'myorders/:oid',component:MyOrdersComponent}
   
 
   

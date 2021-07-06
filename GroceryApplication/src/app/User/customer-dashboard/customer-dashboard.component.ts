@@ -25,4 +25,9 @@ showUser(){
   alert(this.id);
 this.router.navigate(['myprofile',this.id]);
 }
+showOrder(){
+  this.id=localStorage.getItem("Login");
+  alert(this.id);
+this.router.navigate(['myorders',this.id]);
+}
 }
