@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { BookProductComponent } from './Order/book-product/book-product.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { OrderListComponent } from './Order/order-list/order-list.component';
@@ -8,8 +9,10 @@ import { ProductCRUDComponent } from './Product/product-crud/product-crud.compon
 import { ProductListComponent } from './Product/product-list/product-list.component';
 import { UpdateProductComponent } from './Product/update-product/update-product.component';
 import { AdminLoginComponent } from './User/admin-login/admin-login.component';
+import { CustomerDashboardComponent } from './User/customer-dashboard/customer-dashboard.component';
 import { DetailsComponent } from './User/details/details.component';
 import { ForgetPasswordComponent } from './User/forget-password/forget-password.component';
+import { MyProfileComponent } from './User/my-profile/my-profile.component';
 import { RegisterAdminComponent } from './User/register-admin/register-admin.component';
 import { RegisterCustomerComponent } from './User/register-customer/register-customer.component';
 import { UpdateUserComponent } from './User/update-user/update-user.component';
@@ -25,7 +28,7 @@ const routes: Routes = [
   {path:'loginuser',component:UserLoginComponent},
   {path:'forget',component:ForgetPasswordComponent},
   {path:'userlist',component:UserDetailComponent},
-  {path:'updateuser/:id',component:UpdateUserComponent},
+  {path:'updateuser/:loginId',component:UpdateUserComponent},
   {path:'detailsuser/:id',component:DetailsComponent},
   {path:'productcrud',component:ProductCRUDComponent},
   {path:'productlist',component:ProductListComponent},
@@ -33,7 +36,10 @@ const routes: Routes = [
   {path:'productcrud',component:ProductCRUDComponent},
   {path:'order/:pid',component:BookProductComponent},
   {path:'orderlist',component:OrderListComponent},
-  {path:'orderdetails/:id',component:OrderDetailsComponent}
+  {path:'orderdetails/:id',component:OrderDetailsComponent},
+  {path:'customerDashboard',component:CustomerDashboardComponent},
+  {path:'myprofile/:loginId',component:MyProfileComponent}
+  
 
   
 ];

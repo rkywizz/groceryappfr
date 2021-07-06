@@ -1,2 +1,61 @@
 
 
+<p>details works!</p>
+
+<form #contactForm="ngForm" >
+ 
+    <table>
+        <tr>
+    
+            <td>  
+               <label for="id">user id</label>
+            </td>
+            <td>
+               <input type="text" name="id" [(ngModel)]="userObj.id">
+            </td>
+               </tr>
+    
+      <tr>
+    
+     <td>  
+        <label for="firstName">First Name</label>
+     </td>
+     <td>
+        <input type="text" name="firstName" [(ngModel)]="userObj.firstName">
+     </td>
+        </tr>
+
+        <tr>
+            <td>  
+               <label for="lastName">Last Name</label>
+            </td>
+            <td>
+               <input type="text" name="lastName" [(ngModel)]="userObj.lastName" />
+            </td>
+         </tr>
+          
+        <tr>
+            <td>
+            <label for="email">email</label>
+          </td>
+          <td>
+            <input type="email" name="email" [(ngModel)]="userObj.emailId">
+          </td>
+          </tr>
+          <tr>
+    
+            <td>  
+               <label for="username">Mobile No</label>
+            </td>
+            <td>
+               <input type="text" name="username" [(ngModel)]="userObj.mobileNo">
+            </td>
+  
+     
+      </table>
+
+      <!-- <button routerLink='/updateuser'>UPDATE</button> -->
+      <div>
+      
+      </div>
+      </form>

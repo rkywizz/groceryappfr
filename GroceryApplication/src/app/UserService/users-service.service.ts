@@ -38,9 +38,15 @@ export class UsersServiceService {
           getUserById(id:number):Observable<User>{
             return this.http.get<User>(this.restApiUrl+"/bypk/"+id);
             }
-          updateUser(id:number,user1:User):Observable<User>{
+            getUserByLoginId(loginId:string):Observable<User>{
+              return this.http.get<User>(this.restApiUrl+"/bylogin/"+loginId);
+              }
+          updateUser(user1:User):Observable<User>{
             return this.http.put<User>(this.restApiUrl+"/update",user1,{  responseType: 'text' as 'json'  });
             }
+            // getAllOrders():Observable<OrderModel>{
+            //   return this.http.get<OrderModel>(this.restApiUrl+'/allOrder');
+            //   }
           
       }
       

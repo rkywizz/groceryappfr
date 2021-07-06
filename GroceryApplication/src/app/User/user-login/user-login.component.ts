@@ -25,7 +25,8 @@ export class UserLoginComponent implements OnInit {
   this.service.loginCheck(this.userObj).subscribe(success=> {​​​​​​​​
   alert("login Successfull");
   localStorage.setItem("Login",this.userObj.loginId);
-  this.router.navigate(['productlist']);
+  //localStorage.setItem("ID",this.userObj.id.toString());
+  this.router.navigate(['customerDashboard']);
     }​​​​​​​​, error=> {​​​​​​​​ 
   console.log(error.error);
   this.error = error.error;

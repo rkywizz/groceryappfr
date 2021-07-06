@@ -7,5 +7,5 @@ export class User {
     mobileNo:string='';
     emailId:string='';
     roleId:number=0;
-
+    
 }

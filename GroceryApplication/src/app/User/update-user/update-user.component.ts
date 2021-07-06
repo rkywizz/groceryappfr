@@ -9,13 +9,13 @@ import { UsersServiceService } from 'src/app/UserService/users-service.service';
   styleUrls: ['./update-user.component.css']
 })
 export class UpdateUserComponent implements OnInit {
-  myid:number = 0;
+  // myid:number = 0;
   userObj:User=new User();
-     
+     userId:any;
    constructor(private router:Router,private route1:ActivatedRoute,
      private service:UsersServiceService) { 
      route1.params.subscribe(params =>{
-       this.userObj.id=params['id']
+       this.userObj.id=params['loginId']
        }
        );
    }
@@ -24,16 +24,18 @@ export class UpdateUserComponent implements OnInit {
    this.onLoaad();
    }
    onLoaad(){
- this.service.getUserById(this.userObj.id).subscribe(
+     this.userId=localStorage.getItem("Login");
+ this.service. getUserByLoginId(this.userId).subscribe(
    (data:any)=>{this.userObj=data;
    alert(JSON.stringify(data))
    }
  );
+ 
    }
  
    editUser(){
      
-     this.service.updateUser(this.userObj.id,this.userObj).subscribe(
+     this.service.updateUser(this.userObj).subscribe(
     (data: any)=>{
       alert("Editted Sucessfull");
       this.goToList();
@@ -45,3 +47,5 @@ export class UpdateUserComponent implements OnInit {
       this.router.navigate(['userlist']);
     }
  }
+
+

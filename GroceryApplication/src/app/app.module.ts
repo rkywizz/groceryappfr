@@ -22,6 +22,9 @@ import { MyProfileComponent } from './User/my-profile/my-profile.component';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { UpdateProductComponent } from './Product/update-product/update-product.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
+import { CustomerDashboardComponent } from './User/customer-dashboard/customer-dashboard.component';
+import { MyOrdersComponent } from './User/my-orders/my-orders.component';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { OrderDetailsComponent } from './Order/order-details/order-details.compo
     MyProfileComponent,
     AddProductComponent,
     UpdateProductComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    CustomerDashboardComponent,
+    MyOrdersComponent,
+  
   ],
   imports: [
     BrowserModule,
