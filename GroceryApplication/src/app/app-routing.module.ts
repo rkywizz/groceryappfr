@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookProductComponent } from './Order/book-product/book-product.component';
+import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { OrderListComponent } from './Order/order-list/order-list.component';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { ProductCRUDComponent } from './Product/product-crud/product-crud.component';
@@ -31,7 +32,8 @@ const routes: Routes = [
   {path:'updateproduct/:id',component:UpdateProductComponent},
   {path:'productcrud',component:ProductCRUDComponent},
   {path:'order/:pid',component:BookProductComponent},
-  {path:'orderlist',component:OrderListComponent}
+  {path:'orderlist',component:OrderListComponent},
+  {path:'orderdetails/:id',component:OrderDetailsComponent}
 
   
 ];

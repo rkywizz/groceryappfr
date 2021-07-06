@@ -27,6 +27,11 @@ loadData(){
    }
  );
   }
+
+  showOrder(id:number){
+    alert(id);
+  this.router.navigate(['orderdetails',id]);
+  }
   deleteOrder(id:number){
     let allow=confirm("Are you sure want to delete this user with id: "+id);
     if(allow == true){

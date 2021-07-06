@@ -29,4 +29,7 @@ export class OrderServicesService {
       deleteOrder(id:number):Observable<OrderModel>{
         return this.http.delete<any>(this.restApiUrl+"/delete?id="+id,{  responseType: 'text' as 'json'  });
         }
+        getOrderById(id:number):Observable<OrderModel>{
+          return this.http.get<OrderModel>(this.restApiUrl+"/bookproducts/byPk/"+id);
+          }
   }

@@ -1,1 +1,148 @@
-<p>order-details works!</p>
+<p>details works!</p>
+
+<form #contactForm="ngForm" >
+ 
+    <table>
+
+        <tr>
+            <td>  
+               <label for="id">Order Id</label>
+            </td>
+            <td>
+               <input type="number" name="id" [(ngModel)]="OrderObj.id">
+            </td>
+               </tr>  
+      <tr>
+    
+     <td>  
+        <label for="Name">Name</label>
+     </td>
+     <td>
+        <input type="text" name="Name" [(ngModel)]="OrderObj.name">
+     </td>
+        </tr>
+
+        <tr>
+            <td>  
+               <label for="email">Email ID</label>
+            </td>
+            <td>
+               <input type="email" name="email" [(ngModel)]="OrderObj.emailId" />
+            </td>
+               </tr>
+    
+
+        <tr>
+          <td>
+          <label for="mobileNo">MobileNo</label>
+        </td>
+        <td>
+          <input type="text" name="mobileNo" [(ngModel)]="OrderObj.mobileNo">
+         
+        </td>
+        </tr>
+
+          
+        <tr>
+            <td>
+            <label for="address">Address</label>
+          </td>
+          <td>
+            <input type="text" name="address" [(ngModel)]="OrderObj.address">
+          </td>
+          </tr>
+          <tr>
+    
+            <td>  
+               <label for="district">District</label>
+            </td>
+            <td>
+               <input type="text" name="district" [(ngModel)]="OrderObj.district">
+            </td>
+        </tr>
+
+        <tr>
+        <td>  
+            <label for="pincode">Pincode</label>
+         </td>
+         <td>
+            <input type="text" name="pincode" [(ngModel)]="OrderObj.pincode">
+         </td>
+     </tr>
+
+     <tr>
+      <td>  
+          <label for="state">State</label>
+       </td>
+       <td>
+          <input type="text" name="state" [(ngModel)]="OrderObj.state">
+       </td>
+   </tr>
+
+
+     <tr>
+      <td>  
+          <label for="country">Country</label>
+       </td>
+       <td>
+          <input type="text" name="country" [(ngModel)]="OrderObj.country">
+       </td>
+   </tr>
+
+   
+   <tr>
+      <td>  
+          <label for="productId">Product ID</label>
+       </td>
+       <td>
+          <input type="text" name="productId" [(ngModel)]="OrderObj.productId">
+       </td>
+   </tr>
+
+   
+   <tr>
+      <td>  
+          <label for="productName">Product Name</label>
+       </td>
+       <td>
+          <input type="text" name="productName" [(ngModel)]="OrderObj.productName">
+       </td>
+   </tr>
+
+   
+   <tr>
+      <td>  
+          <label for="quantity">Quantity</label>
+       </td>
+       <td>
+          <input type="text" name="quantity" [(ngModel)]="OrderObj.quantity">
+       </td>
+   </tr>
+
+   
+   <tr>
+      <td>  
+          <label for="amount">Amount</label>
+       </td>
+       <td>
+          <input type="text" name="roleId" [(ngModel)]="OrderObj.amount">
+       </td>
+   </tr>
+
+   
+   <tr>
+      <td>  
+          <label for="loginId">loginId</label>
+       </td>
+       <td>
+          <input type="text" name="loginId" [(ngModel)]="OrderObj.user.loginId">
+       </td>
+   </tr>
+
+  
+     
+      </table>
+      <div>
+      
+      </div>
+      </form>
