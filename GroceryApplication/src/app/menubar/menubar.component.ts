@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menubar.component.css']
 })
 export class MenubarComponent implements OnInit {
-
-  constructor() { }
+ 
+ 
+  constructor() {}
 
   ngOnInit(): void {
   }
