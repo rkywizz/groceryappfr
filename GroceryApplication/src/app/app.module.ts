@@ -24,6 +24,8 @@ import { UpdateProductComponent } from './Product/update-product/update-product.
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { CustomerDashboardComponent } from './User/customer-dashboard/customer-dashboard.component';
 import { MyOrdersComponent } from './User/my-orders/my-orders.component';
+import { PaymentModuleComponent } from './Order/payment-module/payment-module.component';
+import { AdminDashboardComponent } from './User/admin-dashboard/admin-dashboard.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { MyOrdersComponent } from './User/my-orders/my-orders.component';
     OrderDetailsComponent,
     CustomerDashboardComponent,
     MyOrdersComponent,
+    PaymentModuleComponent,
+    AdminDashboardComponent,
   
   ],
   imports: [

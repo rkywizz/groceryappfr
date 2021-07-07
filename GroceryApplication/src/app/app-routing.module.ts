@@ -4,10 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookProductComponent } from './Order/book-product/book-product.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
 import { OrderListComponent } from './Order/order-list/order-list.component';
+import { PaymentModuleComponent } from './Order/payment-module/payment-module.component';
 import { AddProductComponent } from './Product/add-product/add-product.component';
 import { ProductCRUDComponent } from './Product/product-crud/product-crud.component';
 import { ProductListComponent } from './Product/product-list/product-list.component';
 import { UpdateProductComponent } from './Product/update-product/update-product.component';
+import { AdminDashboardComponent } from './User/admin-dashboard/admin-dashboard.component';
 import { AdminLoginComponent } from './User/admin-login/admin-login.component';
 import { CustomerDashboardComponent } from './User/customer-dashboard/customer-dashboard.component';
 import { DetailsComponent } from './User/details/details.component';
@@ -39,9 +41,11 @@ const routes: Routes = [
   {path:'orderlist',component:OrderListComponent},
   {path:'orderdetails/:id',component:OrderDetailsComponent},
   {path:'customerDashboard',component:CustomerDashboardComponent},
+  {path:'adminDashboard',component:AdminDashboardComponent},
   {path:'myprofile/:loginId',component:MyProfileComponent},
   {path:'myorders/:loginId',component:MyOrdersComponent},
-  {path:'myorders/:oid',component:MyOrdersComponent}
+  {path:'myorders/:oid',component:MyOrdersComponent},
+  {path:'payment',component:PaymentModuleComponent}
   
 
   

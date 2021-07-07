@@ -3,7 +3,7 @@
         Product List
     </div>
      <table class="table table-bordered table-primary">
-        <!-- <tr class="table-warning"><th>Product ID</th><th>Code</th><th>Name</th><th>Description</th><th>price</th></tr> -->
+      
         <div class="card-group">
     <tr class="table-danger" *ngFor="let productObj of productList">
       <div class="row">
@@ -12,8 +12,9 @@
             <img class="card-img-top" src="https://sc04.alicdn.com/kf/UTB8L4HPotnJXKJkSaiyq6AhwXXam.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{productObj.name}}</h5>
-              <p class="card-text">{{productObj.code}}</p>
-              <p class="card-text">{{productObj.price}}</p>
+              <p class="card-text">Product Code:{{productObj.code}}</p>
+              <p class="card-text">Stock:{{productObj.quantity}}</p>
+              <p class="card-text">Price:{{productObj.price}}</p>
               <a href="#" class="btn btn-primary" routerLink="/order/{{productObj.id}}">Order</a>
             </div>
           </div>

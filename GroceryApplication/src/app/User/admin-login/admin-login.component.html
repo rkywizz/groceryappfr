@@ -12,14 +12,7 @@
                     <h4>Sign in to your account</h4>
                     <form #Form=ngForm (ngSubmit)="onSubmit()">
 
-                        
-                        <!-- <div class="form-row">
-                            <div class="col-lg-7">
-                                <input required id="rollId" class="form-control my-3 p-4" 
-                                name="rollId" [(ngModel)]="userObj.loginId" type="text" 
-                                #logincontroller='ngModel'placeholder="LoginId" />
-                            </div>
-                        </div> -->
+                    
                     
                         <div class="form-row">
                             <div class="col-lg-7">
@@ -43,8 +36,8 @@
                                 class="btn1 mt-3 mb-5">Login</button>
                             </div>
                         </div>
-                        <a href="#" routerLink='/forget'>Forgot Password</a>
-                        <p>Don't have an account ? <a routerLink='/registeradmin'>Register here</a> </p>
+                        <p>Click here for--><a href="#" routerLink='/forget'>Forgot Password</a></p>
+                        <!-- <p>Don't have an account ? <a routerLink='/registeradmin'>Register here</a> </p> -->
                     </form>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { User } from 'src/app/UserModel/user.model';
 import { UsersServiceService } from 'src/app/UserService/users-service.service';
 
@@ -21,7 +21,7 @@ onSubmit(){
   this.service.registerUser(this.userObj).subscribe(
     (data:any)=>{
       alert("User Added Successfully!!!!!");
-      
+      this.router.navigate(['userlist']);
     }
   );  
   alert(JSON.stringify(this.userObj));

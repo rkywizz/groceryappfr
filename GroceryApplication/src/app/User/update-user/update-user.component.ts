@@ -38,7 +38,7 @@ export class UpdateUserComponent implements OnInit {
      this.service.updateUser(this.userObj).subscribe(
     (data: any)=>{
       alert("Editted Sucessfull");
-      this.goToList();
+     this.goToList();
     }
        );
    }

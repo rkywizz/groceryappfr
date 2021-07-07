@@ -24,7 +24,9 @@ export class AdminLoginComponent implements OnInit {
     {​​​​​​​​
   this.service.loginCheck(this.userObj).subscribe(success=> {​​​​​​​​
   alert("login Successfull");
-  this.router.navigate(['productcrud']);
+  localStorage.setItem("Login",this.userObj.loginId);
+  this.router.navigate(['adminDashboard']);
+ 
     }​​​​​​​​, error=> {​​​​​​​​ 
   console.log(error.error);
   this.error = error.error;
