@@ -11,5 +11,7 @@ export class MenubarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+logout(){
+  localStorage.removeItem("Login");
+}
 }

@@ -44,7 +44,8 @@ export class UpdateUserComponent implements OnInit {
    }
     goToList()
     {
-      this.router.navigate(['userlist']);
+      
+      this.router.navigate(['myprofile/'+this.userId]);
     }
  }
 
