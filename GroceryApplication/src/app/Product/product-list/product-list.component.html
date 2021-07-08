@@ -13,7 +13,7 @@
       
         <div class="card-group">
           
-    <tr class="table-danger" *ngFor="let productObj of productList">
+    <tr class="table-danger" *ngFor="let productObj of productList | paginate: { itemsPerPage: 8, currentPage: page ,totalItems:totalRecords}">
       <div class="row">
         <div class="col-sm-6">
           <div class="card" style="width: 18rem;">
@@ -36,5 +36,5 @@
       
       </div>
     </table>
-  
+    <pagination-controls style="text-align:center"  (pageChange)="page = $event"></pagination-controls>
     </div> 

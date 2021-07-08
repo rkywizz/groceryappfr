@@ -60,6 +60,11 @@ export class UsersServiceService {
                cancelOrder(id:number):Observable<string>{
                 return this.http.get<string>("http://localhost:8093/Order/cancelorder?id="+id,{  responseType: 'text' as 'json'  });
                 }
-          
+                searchOrder(id:number):Observable<OrderModel[]>{
+                  return this.http.get<OrderModel[]>("http://localhost:8093/Order/bookproducts/byPk/"+id);
+                }
+                searchUser(loginId:string):Observable<User[]>{
+                  return this.http.get<User[]>(this.restApiUrl+"/bylogin/"+loginId);
+                }
       }
       

@@ -11,7 +11,8 @@ import { UsersServiceService } from 'src/app/UserService/users-service.service';
 export class UserDetailComponent implements OnInit {
   userList1:User[]=[];
   id:number=0;
-
+  userObj:User=new User();
+loginId:string='';
   constructor(private service:UsersServiceService,private router:Router) {
 
    }
@@ -48,4 +49,17 @@ this.router.routeReuseStrategy.shouldReuseRoute = () => false;
       this.router.navigate(['userlist']);
 
 
-}}
+}
+
+search(){
+  this. userList1=[];
+  this.service.searchUser(this.loginId).subscribe(
+    (data:any)=>{
+       this.userList1.push(data);
+      //this.userList1=data;
+      alert(JSON.stringify(data));
+    }
+  );
+   
+}
+}

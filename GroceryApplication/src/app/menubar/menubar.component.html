@@ -35,11 +35,11 @@
           </li>
          
           <li class="nav-item">
-            <a class="nav-link"   (click)="logout()" *ngIf="checkAdmin()" routerLink='/adminDashboard'>Admin Dashboard</a>
+            <a class="nav-link"    *ngIf="checkAdmin()" routerLink='/adminDashboard'>Admin Dashboard</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link"   (click)="logout()" *ngIf="checkCustomer()" routerLink='/customerDashboard'>Customer Dashboard</a>
+            <a class="nav-link"   *ngIf="checkCustomer()" routerLink='/customerDashboard'>Customer Dashboard</a>
           </li>
           
 

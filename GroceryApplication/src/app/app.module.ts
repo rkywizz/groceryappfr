@@ -27,7 +27,7 @@ import { MyOrdersComponent } from './User/my-orders/my-orders.component';
 import { PaymentModuleComponent } from './Order/payment-module/payment-module.component';
 import { AdminDashboardComponent } from './User/admin-dashboard/admin-dashboard.component';
 import { HomeComponent } from './home/home.component';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -61,7 +61,9 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
+
  
   ],
   providers: [],

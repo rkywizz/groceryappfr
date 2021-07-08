@@ -15,6 +15,9 @@ export class ProductListComponent implements OnInit {
   productList:ProductModel[]=[];
   
 name:string='';
+
+totalRecords:string='';
+page:number=1
   constructor(private service:ProductServicesService,private router:Router) {
 
    }
@@ -26,6 +29,7 @@ loadData(){
  this.service.getAllProducts().subscribe(
    (data:any)=>{
      this.productList=data;
+     this.totalRecords=data.productList.length
      alert(JSON.stringify(data));
    }
  );

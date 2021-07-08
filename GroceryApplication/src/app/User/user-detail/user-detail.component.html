@@ -1,10 +1,12 @@
-<p>user-detail works!</p>
-
 
 <div class="conatiner">
-    <div class="header">
-        User List
-    </div>
+    <div class="input-group">
+        <div class="col-sm-2">
+        <input type="search" class="form-control rounded"  [(ngModel)]="loginId" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" />
+        </div>
+        <button type="button" (click)="search()" class="btn btn-outline-primary">search</button>
+      </div>
     <table class="table table-bordered table-primary">
         <tr class="table-warning"><th>Login ID</th><th>First Name</th><th>Last Name</th><th>email</th><th>Action</th></tr>
     <tr class="table-danger" *ngFor="let userObj of userList1">

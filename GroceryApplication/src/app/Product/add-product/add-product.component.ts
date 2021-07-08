@@ -20,7 +20,7 @@ onSubmit(){
   this.service.AddProduct(this.productObj).subscribe(
     (data:any)=>{
       alert("Product Added Successfully!!!!!");
-      
+      this.router.navigate(['productcrud']);
     }
   );  
   alert(JSON.stringify(this.productObj));

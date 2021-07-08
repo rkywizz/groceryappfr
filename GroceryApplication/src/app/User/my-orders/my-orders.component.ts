@@ -16,6 +16,7 @@ export class MyOrdersComponent implements OnInit {
   userId:any;
   userObj:User=new User();
   orderObj:OrderModel=new OrderModel();
+ 
   constructor(private route1:ActivatedRoute, private service:UsersServiceService,private route2:ActivatedRoute) { 
     route1.params.subscribe(params =>{
       this.userObj.id=params['loginId']
@@ -46,5 +47,18 @@ export class MyOrdersComponent implements OnInit {
       }
     );
   }
-}}
+}
+
+search(){
+  this.orderList=[];
+  this.service.searchOrder(this.orderObj.id).subscribe(
+    (data:any)=>{
+       this.orderList.push(data);
+      //this.orderList=data;
+      alert(JSON.stringify(data));
+    }
+  );
+   
+}
+}
 

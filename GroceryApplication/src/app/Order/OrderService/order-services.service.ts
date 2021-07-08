@@ -32,4 +32,7 @@ export class OrderServicesService {
         getOrderById(id:number):Observable<OrderModel>{
           return this.http.get<OrderModel>(this.restApiUrl+"/bookproducts/byPk/"+id);
           }
+          searchOrder(id:number):Observable<OrderModel[]>{
+            return this.http.get<OrderModel[]>("http://localhost:8093/Order/bookproducts/byPk/"+id);
+          }
   }

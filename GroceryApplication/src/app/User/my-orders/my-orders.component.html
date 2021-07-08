@@ -1,8 +1,12 @@
-<h1>sdhfiuoshfioshfojsof</h1>
+
 <div class="conatiner">
-    <div class="header">
-        Order List 
-    </div>
+    <div class="input-group">
+        <div class="col-sm-2">
+        <input type="search" class="form-control rounded"  [(ngModel)]="orderObj.id" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" />
+        </div>
+        <button type="button" (click)="search()" class="btn btn-outline-primary">search</button>
+      </div>
     <table class="table table-bordered table-primary">
         <tr class="table-warning"><th>Order ID</th><th>Name</th><th>Address</th><th>Email ID</th><th>product name</th><th>quantity</th><th>amount</th><th>User Id</th><th>Action</th></tr> 
     <tr class="table-danger" *ngFor="let OrderObj of orderList">
