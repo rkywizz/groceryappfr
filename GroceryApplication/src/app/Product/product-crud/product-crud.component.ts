@@ -10,6 +10,7 @@ import { ProductServicesService } from '../productService/product-services.servi
 })
 export class ProductCRUDComponent implements OnInit {
   productList:ProductModel[]=[];
+  name:string='';
   constructor(private service:ProductServicesService,private router:Router) {
 
    }
@@ -48,5 +49,17 @@ this.service.deleteProduct(id).subscribe(
 this.router.routeReuseStrategy.shouldReuseRoute = () => false;
       this.router.onSameUrlNavigation = 'reload';
       this.router.navigate(['productcrud']);
+}
+
+search(){
+  this.productList=[];
+  this.service.searchProduct(this.name).subscribe(
+    (data:any)=>{
+      // this.productList.push(data);
+        this.productList=data;
+      alert(JSON.stringify(data));
+    }
+  );
+   
 }
 }

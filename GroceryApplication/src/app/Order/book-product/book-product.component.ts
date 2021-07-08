@@ -12,7 +12,7 @@ import { OrderServicesService } from '../OrderService/order-services.service';
 })
 export class BookProductComponent implements OnInit {
 OrderObj:OrderModel=new OrderModel();
-
+errormsg:string='';
 constructor(private router:Router,private service:OrderServicesService,private route1:ActivatedRoute) {
   route1.params.subscribe(params =>{
     this.OrderObj.productId=params['pid']
@@ -26,10 +26,13 @@ onSubmit(){
   const loginId=localStorage.getItem("Login");
 this.service.booKProduct(loginId,this.OrderObj).subscribe(
  (data:any)=>{
-   alert("Product Added Successfully!!!!!");
+   alert("Order Successfully!!!!!");
    
- }
-);  
+ },
+ error=> {​​​​​​​​ 
+  console.log(error.error);
+  this.errormsg = error.error;
+ });  
 alert(JSON.stringify(this.OrderObj));
 }
 }

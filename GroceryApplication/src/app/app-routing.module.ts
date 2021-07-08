@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 import { BookProductComponent } from './Order/book-product/book-product.component';
 import { OrderDetailsComponent } from './Order/order-details/order-details.component';
@@ -23,6 +24,8 @@ import { UserDetailComponent } from './User/user-detail/user-detail.component';
 import { UserLoginComponent } from './User/user-login/user-login.component';
 
 const routes: Routes = [
+  {path:'',redirectTo:'home',pathMatch:'full'},
+ {path:'home',component:HomeComponent},
   {path:'registercustomer',component:RegisterCustomerComponent},
   {path:'registeradmin',component:RegisterAdminComponent},
   {path:'registeruser',component:RegisterCustomerComponent},

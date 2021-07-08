@@ -14,5 +14,38 @@ export class MenubarComponent implements OnInit {
   }
 logout(){
   localStorage.removeItem("Login");
+  localStorage.removeItem("Admin");
 }
+checkLogin()
+  {
+    if((!!localStorage.getItem("Login")) || (!!localStorage.getItem("Admin")))
+    {
+      
+      return true;
+    }
+    return false;
+  }
+  checkLogout()
+  {
+    if((!!localStorage.getItem("Login"))|| (!!localStorage.getItem("Admin")))
+    {
+      
+      return false;
+    }
+    return true;
+  }
+  checkAdmin(){
+if(localStorage.getItem("Admin")){
+      
+  return true;
+}
+return false;
+}
+checkCustomer(){
+  if(localStorage.getItem("Login")){
+      
+    return true;
+  }
+  return false;
+  }
 }

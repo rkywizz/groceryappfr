@@ -26,6 +26,7 @@ import { CustomerDashboardComponent } from './User/customer-dashboard/customer-d
 import { MyOrdersComponent } from './User/my-orders/my-orders.component';
 import { PaymentModuleComponent } from './Order/payment-module/payment-module.component';
 import { AdminDashboardComponent } from './User/admin-dashboard/admin-dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { AdminDashboardComponent } from './User/admin-dashboard/admin-dashboard.
     MyOrdersComponent,
     PaymentModuleComponent,
     AdminDashboardComponent,
+    HomeComponent,
   
   ],
   imports: [

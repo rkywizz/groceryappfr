@@ -10,7 +10,7 @@ import { UsersServiceService } from 'src/app/UserService/users-service.service';
 })
 export class AdminLoginComponent implements OnInit {
   userObj:User;
-  error:string='';
+  errormsg:string='';
   constructor(private router:Router,private service:UsersServiceService) {
     this.userObj=new User();
    }
@@ -22,14 +22,14 @@ export class AdminLoginComponent implements OnInit {
 
   onSubmit()
     {​​​​​​​​
-  this.service.loginCheck(this.userObj).subscribe(success=> {​​​​​​​​
+  this.service.loginCheckadmin(this.userObj).subscribe(success=> {​​​​​​​​
   alert("login Successfull");
-  localStorage.setItem("Login",this.userObj.loginId);
+  localStorage.setItem("Admin",this.userObj.loginId);
   this.router.navigate(['adminDashboard']);
  
     }​​​​​​​​, error=> {​​​​​​​​ 
   console.log(error.error);
-  this.error = error.error;
+  this.errormsg = error.error;
         
     }​​​​​​​​);
     }​​​​​​​​

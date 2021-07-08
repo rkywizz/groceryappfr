@@ -15,18 +15,18 @@
             <a class="nav-link" href="#" >Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle"  href="#" *ngIf="checkLogout()" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Sign-In
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#" routerLink='/loginuser'>User Login</a>
-              <a class="dropdown-item" href="#" routerLink='/loginadmin'>Admin Login</a>
+              <a class="dropdown-item" href="#" routerLink='/loginuser' >User Login</a>
+              <a class="dropdown-item" href="#" routerLink='/loginadmin' >Admin Login</a>
             
             </div>
           </li>
         
           <li class="nav-item">
-            <a class="nav-link" href="#" routerLink='/registercustomer'>Sign-Up</a>
+            <a class="nav-link" href="#" *ngIf="checkLogout()" routerLink='/registercustomer'>Sign-Up</a>
           </li>
          
           
@@ -34,20 +34,23 @@
             <a class="nav-link" href="#" routerLink='/productlist'>Product list</a>
           </li>
          
-         
           <li class="nav-item">
-            <a class="nav-link" href="#" routerLink='/productcrud'>Product Details</a>
+            <a class="nav-link"   (click)="logout()" *ngIf="checkAdmin()" routerLink='/adminDashboard'>Admin Dashboard</a>
           </li>
-         
+          
+          <li class="nav-item">
+            <a class="nav-link"   (click)="logout()" *ngIf="checkCustomer()" routerLink='/customerDashboard'>Customer Dashboard</a>
+          </li>
+          
+
           <li class="nav-item">
             <a class="nav-link" href="#" routerLink='/payment'>payment</a>
           </li>
 
            <li class="nav-item">
-            <a class="nav-link"  href="#" (click)="logout()">Signout</a>
+            <a class="nav-link"   (click)="logout()" *ngIf="checkLogin()" routerLink='/home'>Signout</a>
           </li>
-     
-         
+
         </ul>
         
       </div>

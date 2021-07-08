@@ -1,7 +1,7 @@
 
 
 <form #contactForm="ngForm" >
- 
+ <body>
     <table>
         <tr>
     
@@ -9,7 +9,7 @@
                <label for="id">Product id</label>
             </td>
             <td>
-               <input type="number" name="id" [(ngModel)]="productObj.id">
+               <input type="number" readonly name="id" [(ngModel)]="productObj.id">
             </td>
                </tr>
     
@@ -19,7 +19,7 @@
         <label for="name">Product Name</label>
      </td>
      <td>
-        <input type="text" name="name" [(ngModel)]="productObj.name">
+        <input type="text" readonly name="name" [(ngModel)]="productObj.name">
      </td>
         </tr>
 
@@ -51,4 +51,5 @@
       <div>
       
       </div>
+      </body>
       </form>

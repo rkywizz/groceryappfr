@@ -19,6 +19,8 @@ export class UsersServiceService {
       'Content-Type': 'application/json'
     })
   }
+
+  
    registerUser(user1:User):Observable<string>{
   this.msg= this.http.post<string>(this.restApiUrl+"/add" ,user1, {  responseType: 'text' as 'json'  });
   alert(JSON.stringify(this.msg));
@@ -29,6 +31,13 @@ export class UsersServiceService {
     {
       return this.http.get<string | User>(this.restApiUrl+"/authuser/"+ userobject.loginId+"/"+userobject.password,{  responseType: 'text' as 'json'  });
     }
+
+
+    loginCheckadmin(userobject:User):Observable<string | User>
+    {
+      return this.http.get<string | User>(this.restApiUrl+"/authadmin/"+ userobject.loginId+"/"+userobject.password,{  responseType: 'text' as 'json'  });
+    }
+
     getAllUsers():Observable<User>{
       return this.http.get<User>(this.restApiUrl+'/alluser');
       }

@@ -14,7 +14,7 @@ import { ProductServicesService } from '../productService/product-services.servi
 export class ProductListComponent implements OnInit {
   productList:ProductModel[]=[];
   
-
+name:string='';
   constructor(private service:ProductServicesService,private router:Router) {
 
    }
@@ -30,5 +30,15 @@ loadData(){
    }
  );
   }
-
+search(){
+  this.productList=[];
+  this.service.searchProduct(this.name).subscribe(
+    (data:any)=>{
+      // this.productList.push(data);
+      this.productList=data;
+      alert(JSON.stringify(data));
+    }
+  );
+   
+}
 }

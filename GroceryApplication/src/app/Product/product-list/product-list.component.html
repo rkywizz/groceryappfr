@@ -1,10 +1,18 @@
+
  <div class="conatiner">
-    <div class="header">
-        Product List
+  
+  <div class="input-group">
+    <div class="col-sm-2">
+    <input type="search" class="form-control rounded"  [(ngModel)]="name" placeholder="Search" aria-label="Search"
+      aria-describedby="search-addon" />
     </div>
-     <table class="table table-bordered table-primary">
+    <button type="button" (click)="search()" class="btn btn-outline-primary">search</button>
+  </div>
+  
+     <table class="table table-bordered table-primary text-center">
       
         <div class="card-group">
+          
     <tr class="table-danger" *ngFor="let productObj of productList">
       <div class="row">
         <div class="col-sm-6">
@@ -15,14 +23,18 @@
               <p class="card-text">Product Code:{{productObj.code}}</p>
               <p class="card-text">Stock:{{productObj.quantity}}</p>
               <p class="card-text">Price:{{productObj.price}}</p>
-              <a href="#" class="btn btn-primary" routerLink="/order/{{productObj.id}}">Order</a>
+              
+          <a href="#" class="btn btn-primary" routerLink="/order/{{productObj.id}}">Order</a>
             </div>
+         
           </div>
         </div>
        </div>
       
        
         </tr>
+      
       </div>
     </table>
+  
     </div> 
