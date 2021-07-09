@@ -21,11 +21,11 @@
             <div class="card-body">
               <h5 class="card-title">{{productObj.name}}</h5>
               <p class="card-text">Product Code:{{productObj.code}}</p>
-              <p class="card-text">Stock:{{productObj.quantity}}</p>
+              <p class="card-text" >Stock:{{productObj.quantity}}</p>
               <p class="card-text">Price:{{productObj.price}}</p>
-              
-          <a href="#" class="btn btn-primary" routerLink="/order/{{productObj.id}}">Order</a>
-            </div>
+          <button href="#" class="btn btn-primary"  [ngStyle]="{'background-color':success === true ? 'red' : 'blue' }" *ngIf="checkProduct(productObj.quantity)" [disabled]="success" routerLink="/order/{{productObj.id}}" >{{stockStatus}}</button>
+       
+        </div>
          
           </div>
         </div>
