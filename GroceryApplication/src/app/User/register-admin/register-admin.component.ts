@@ -11,6 +11,7 @@ import { UsersServiceService } from 'src/app/UserService/users-service.service';
 export class RegisterAdminComponent implements OnInit {
 
   userObj:User;
+  errorMsg:string='';
   constructor(private router:Router,private service:UsersServiceService) {
     this.userObj=new User();
    }
@@ -20,10 +21,14 @@ export class RegisterAdminComponent implements OnInit {
 onSubmit(){
   this.service.registerUser(this.userObj).subscribe(
     (data:any)=>{
-      alert("User Added Successfully!!!!!");
+      alert("Admin Added Successfully!!!!!");
       this.router.navigate(['userlist']);
-    }
+    }, error=> {​​​​​​​​ 
+      console.log(error.error);
+      this.errorMsg = error.error;
+            
+     }
   );  
-  alert(JSON.stringify(this.userObj));
+
 }
 }

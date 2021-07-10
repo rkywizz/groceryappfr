@@ -10,7 +10,7 @@ import { UsersServiceService } from 'src/app/UserService/users-service.service';
 })
 export class UserLoginComponent implements OnInit {
   userObj:User;
-  error:string='';
+  errorMsg:string='';
   constructor(private router:Router,private service:UsersServiceService) {
     this.userObj=new User();
    }
@@ -25,11 +25,11 @@ export class UserLoginComponent implements OnInit {
   this.service.loginCheck(this.userObj).subscribe(success=> {​​​​​​​​
   alert("login Successfull");
   localStorage.setItem("Login",this.userObj.loginId);
-  //localStorage.setItem("ID",this.userObj.id.toString());
+  
   this.router.navigate(['customerDashboard']);
     }​​​​​​​​, error=> {​​​​​​​​ 
   console.log(error.error);
-  this.error = error.error;
+  this.errorMsg = error.error;
         
     }​​​​​​​​);
     }​​​​​​​​

@@ -12,13 +12,15 @@ import { ProductServicesService } from '../productService/product-services.servi
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  productList:ProductModel[]=[];
- 
-  stockStatus:string='order';
+  
+productList:ProductModel[]=[];
+cartData:string="";
+stockStatus:string='order';
 name:string='';
 success:boolean=true;
 totalRecords:string='';
 page:number=1
+errorMsg: string='';
   constructor(private service:ProductServicesService,private router:Router) {
 
    }
@@ -30,7 +32,7 @@ loadData(){
  this.service.getAllProducts().subscribe(
    (data:any)=>{
      this.productList=data;
-     this.totalRecords=data.productList.length
+     this.totalRecords=data.productList;
      alert(JSON.stringify(data));
    }
  );
@@ -39,10 +41,13 @@ search(){
   this.productList=[];
   this.service.searchProduct(this.name).subscribe(
     (data:any)=>{
-      // this.productList.push(data);
-      this.productList=data;
-      alert(JSON.stringify(data));
-    }
+      this.productList=data;  
+    },
+    error=> {​​​​​​​​ 
+      console.log(error.error);
+      this.errorMsg = error.error;
+          
+        }
   );
    
 }
@@ -67,5 +72,18 @@ checkStock(quantity:number){
   return false;
 
 }
-
+cartFunction(code:string){
+  if(this.cartData.includes(code)){
+    var c=confirm("Already in Cart. Do you want to remove it?");
+    if(c){
+      this.cartData=this.cartData.replace(code+",","");
+      localStorage.setItem("cartraw",this.cartData);
+    }
+  }
+  else{
+    this.cartData=this.cartData+code+",";
+    alert("Added to cart")
+    localStorage.setItem("cartraw",this.cartData);
+  }
+}
 }

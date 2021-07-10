@@ -9,7 +9,7 @@ import { UsersServiceService } from 'src/app/UserService/users-service.service';
   styleUrls: ['./register-customer.component.css']
 })
 export class RegisterCustomerComponent implements OnInit {
-
+      errorMsg:string='';
     userObj:User;
       constructor(private router:Router,private service:UsersServiceService) {
         this.userObj=new User();
@@ -19,12 +19,16 @@ export class RegisterCustomerComponent implements OnInit {
       }
     onSubmit(){
       this.service.registerUser(this.userObj).subscribe(
-        (data:any)=>{
-          alert("User Added Successfully!!!!!");
+        (success)=>{
+          alert("Registered Successfully!!");
           
-        }
-      );  
-      alert(JSON.stringify(this.userObj));
+        },
+        error=> {​​​​​​​​ 
+          console.log(error.error);
+          this.errorMsg = error.error;
+                
+         } );  
+      
     }
     }
     

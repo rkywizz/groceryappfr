@@ -52,16 +52,24 @@
             <input type="number" name="quantity" [(ngModel)]="productObj.quantity">
           </td>
           </tr>
-
-         
+          
           <tr>
             <input type="submit" [disabled]="!contactForm.form.valid" class="btn1 mt-3 mb-5"  value="ADD">
           </tr>
-
-            
+          <tr>
+            <td>
+            <label for="image">Upload Image</label>
+          </td>
+          <td>
+            <input type="file" (change)="onFileChanged($event)">
+            <!-- <input type="file" name="image" [(ngModel)]="productObj.quantity"> -->
+          </td>
+          <td>
+          <input type="button" (click)="onUpload()" value="upload">
+         </td>
+          </tr> 
      
       </table>
       <div>
-      
       </div>
       </form>

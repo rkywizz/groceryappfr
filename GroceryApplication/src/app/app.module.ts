@@ -28,6 +28,9 @@ import { PaymentModuleComponent } from './Order/payment-module/payment-module.co
 import { AdminDashboardComponent } from './User/admin-dashboard/admin-dashboard.component';
 import { HomeComponent } from './home/home.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { ResetPasswordComponent } from './User/reset-password/reset-password.component';
+import { ShoppingCartComponent } from './Order/shopping-cart/shopping-cart.component';
+import { ShippingAddressComponent } from './Order/shipping-address/shipping-address.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
     PaymentModuleComponent,
     AdminDashboardComponent,
     HomeComponent,
+    ResetPasswordComponent,
+    ShoppingCartComponent,
+    ShippingAddressComponent
   
   ],
   imports: [

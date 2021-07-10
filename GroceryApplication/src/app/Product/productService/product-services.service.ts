@@ -19,9 +19,7 @@ export class ProductServicesService {
     })
   }
    AddProduct(product:ProductModel):Observable<string>{
-  this.msg= this.http.post<string>(this.restApiUrl+"/add" ,product, {  responseType: 'text' as 'json'  });
-  alert(JSON.stringify(this.msg));
-  return this.msg;
+  return this.http.post<string>(this.restApiUrl+"/add" ,product, {  responseType: 'text' as 'json'  });
     }
     getAllProducts():Observable<ProductModel>{
       return this.http.get<ProductModel>(this.restApiUrl+'/allproducts');
@@ -42,5 +40,8 @@ export class ProductServicesService {
             searchProduct(name:string):Observable<ProductModel[]>{
               return this.http.get<ProductModel[]>(this.restApiUrl+"/searchproducts?name="+name);
             }
+            getProductsinput(input:string, len:number):Observable<ProductModel[]>{
+              return this.http.get<ProductModel[]>(this.restApiUrl+'/getproductinput/'+input+'/'+len);
+              }
         }
   

@@ -13,6 +13,7 @@ export class UserDetailComponent implements OnInit {
   id:number=0;
   userObj:User=new User();
 loginId:string='';
+  errorMsg: string='';
   constructor(private service:UsersServiceService,private router:Router) {
 
    }
@@ -24,7 +25,7 @@ loadData(){
  this.service.getAllUsers().subscribe(
    (data:any)=>{
      this.userList1=data;
-     alert(JSON.stringify(data));
+     
    }
  );
   }
@@ -39,15 +40,16 @@ if(allow == true){
 this.service.deleteUser1(id).subscribe(
   (data:any)=>{
     alert("Deleted !!!")
-  
-  }
+  this.ngOnInit();
+  },
+  error=> {​​​​​​​​ 
+    console.log(error.error);
+    this.errorMsg = error.error;
+          
+      }
 );
 
 }
-this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-      this.router.onSameUrlNavigation = 'reload';
-      this.router.navigate(['userlist']);
-
 
 }
 
@@ -56,9 +58,13 @@ search(){
   this.service.searchUser(this.loginId).subscribe(
     (data:any)=>{
        this.userList1.push(data);
-      //this.userList1=data;
-      alert(JSON.stringify(data));
-    }
+    },
+    error=> {​​​​​​​​ 
+      console.log(error.error);
+      this.errorMsg = error.error;
+     
+            
+        }
   );
    
 }

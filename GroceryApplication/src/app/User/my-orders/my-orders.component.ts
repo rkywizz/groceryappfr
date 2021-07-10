@@ -16,6 +16,7 @@ export class MyOrdersComponent implements OnInit {
   userId:any;
   userObj:User=new User();
   orderObj:OrderModel=new OrderModel();
+  errorMsg: string='';
  
   constructor(private route1:ActivatedRoute, private service:UsersServiceService,private route2:ActivatedRoute) { 
     route1.params.subscribe(params =>{
@@ -33,17 +34,17 @@ export class MyOrdersComponent implements OnInit {
   onLoaad(){
     this.userId=localStorage.getItem("Login");
   this.service.getAllOrders(this.userId).subscribe(
-  (data:any)=>{this.orderList=data;
-  alert(JSON.stringify(data))
-  }
-  );
+  (data:any)=>{
+    this.orderList=data;
+    
+  } );
   }
   cancelOrder(oid:number){
     let allow=confirm("Are you sure want to delete this user with id: "+oid);
     if(allow == true){
     this.service.cancelOrder(oid).subscribe(
       (data:any)=>{
-        alert("Deleted !!!")
+        alert("Cancelled !!!")
       }
     );
   }
@@ -54,9 +55,12 @@ search(){
   this.service.searchOrder(this.orderObj.id).subscribe(
     (data:any)=>{
        this.orderList.push(data);
-      //this.orderList=data;
-      alert(JSON.stringify(data));
-    }
+    },
+    error=> {​​​​​​​​ 
+      console.log(error.error);
+      this.errorMsg = error.error;
+            
+        }
   );
    
 }

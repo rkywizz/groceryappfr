@@ -25,7 +25,7 @@ export class DetailsComponent implements OnInit {
   onLoaad(){
   this.service.getUserById(this.userObj.id).subscribe(
   (data:any)=>{this.userObj=data;
-  alert(JSON.stringify(data))
+ 
   }
   );
   }

@@ -1,0 +1,17 @@
+<div class="conatiner">
+    <div class="input-group">
+        <div class="col-sm-2"> 
+    <table class="table table-bordered table-primary">
+        <tr class="table-warning"><th>Product name</th><th>Price</th><th>Order Quantity</th><th>Order Price</th><th>Action</th>></tr> 
+    <tr class="table-danger" *ngFor="let prodObj of productList">
+    <td class="table-primary">{{prodObj.name}}</td>
+    <td class="table-primary">{{trim(prodObj.price)+"perKG"}}</td>
+    <td> <input type="number" id="quantity" name="quantity" #quantity  min="1" max="prodObj.quantity" class="form-control my-3 p-1" /> </td>
+    <td class="table-primary"> {{trim(prodObj.price)*makenumber(quantity.value)}} </td>>
+    <td><button (click)="onClick(prodObj.id,quantity.value)">Update</button>
+        <button (click)="remove(prodObj.code)">Delete</button></td>
+    </tr> 
+    </table>
+    <p>{{totalSum}}</p>
+    <button (click)="onSubmit()">NEXT</button>
+    </div>

@@ -27,7 +27,7 @@ export class UpdateUserComponent implements OnInit {
      this.userId=localStorage.getItem("Login");
  this.service. getUserByLoginId(this.userId).subscribe(
    (data:any)=>{this.userObj=data;
-   alert(JSON.stringify(data))
+ 
    }
  );
  

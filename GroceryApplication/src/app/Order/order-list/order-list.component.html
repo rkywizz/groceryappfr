@@ -6,6 +6,7 @@
           aria-describedby="search-addon" />
         </div>
         <button type="button" (click)="search()" class="btn btn-outline-primary">search</button>
+        <p class="alert-danger">{{errorMsg}}</p>
       </div>
     <table class="table table-bordered table-primary">
         <tr class="table-warning"><th>Order ID</th><th>Name</th><th>Address</th><th>Email ID</th><th>Date</th><th>product name</th><th>quantity</th><th>amount</th><th>User Id</th><th>Action</th></tr> 

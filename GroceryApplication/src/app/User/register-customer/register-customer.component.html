@@ -45,7 +45,7 @@
                     class="form-control my-3 p-1" type="text" #logincontroller='ngModel' />
                     <span *ngIf="logincontroller.invalid && logincontroller.touched" class="alert alert-danger"> Login is required</span>
                 </td>
-                
+                <p class="alert-danger">{{errorMsg}}</p>
             </tr>
 
             <tr>

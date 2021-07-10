@@ -1,4 +1,3 @@
-
 <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
  
     <table>
@@ -9,7 +8,7 @@
         <label for="name">Name</label>
      </td>
      <td>
-        <input type="text" name="name" [(ngModel)]="OrderObj.name">
+        <input type="text" name="name" [(ngModel)]="name">
      </td>
         </tr>
 
@@ -20,7 +19,7 @@
                <label for="emailId">Email Id</label>
             </td>
             <td>
-               <input type="email" name="emailId" [(ngModel)]="OrderObj.emailId">
+               <input type="email" name="emailId" [(ngModel)]="emailId">
             </td>
                </tr>
 
@@ -29,7 +28,7 @@
                <label for="address">Address</label>
             </td>
             <td>
-               <input type="text" name="address" [(ngModel)]="OrderObj.address" />
+               <input type="text" name="address" [(ngModel)]="address" />
             </td>
                </tr>
                <tr>
@@ -37,7 +36,7 @@
                      <label for="district">District</label>
                   </td>
                   <td>
-                     <input type="text" name="district" [(ngModel)]="OrderObj.district" />
+                     <input type="text" name="district" [(ngModel)]="district" />
                   </td>
                      </tr>
           
@@ -47,7 +46,7 @@
           <label for="state">State</label>
         </td>
         <td>
-          <input type="text" name="state" [(ngModel)]="OrderObj.state">
+          <input type="text" name="state" [(ngModel)]="state">
           </td>
           
         
@@ -59,45 +58,24 @@
             <label for="pincode">Pincode</label>
           </td>
           <td>
-            <input type="text" name="pincode" [(ngModel)]="OrderObj.pincode">
+            <input type="text" name="pincode" [(ngModel)]="pincode">
           </td>
           </tr>
-
-          <tr>
-            <td>
-            <label for="country">Country</label>
-          </td>
-          <td>
-            <input type="text" name="country" [(ngModel)]="OrderObj.country">
-          </td>
-          </tr>
-
           <tr>
             <td>
             <label for="mobileno">Mobile No</label>
           </td>
           <td>
-            <input type="string" name="mobileno" [(ngModel)]="OrderObj.mobileNo">
+            <input type="string" name="mobileno" [(ngModel)]="mobileNo">
           </td>
           </tr>
-         
-          
-          <tr>
-            <td>
-            <label for="quantity">Quantity</label>
-          </td>
-          <td>
-            <input type="number" name="quantity" [(ngModel)]="OrderObj.quantity">
-          </td>
-          </tr>
-          
-         
+ 
          
          
           <tr>
             <input type="submit" [disabled]="!contactForm.form.valid" class="btn1 mt-3 mb-5"  value="Order">
           </tr>
-          <p class="alert-danger"> {{errormsg}}</p>
+          <!-- <p> {{errormsg}}</p> -->
          
      
       </table>

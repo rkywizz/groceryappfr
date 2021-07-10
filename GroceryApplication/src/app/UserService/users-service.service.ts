@@ -1,9 +1,9 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { OrderModel } from '../Order/OrderClass/order-model.model';
 import { User } from '../UserModel/user.model';
-
+import {catchError} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -22,9 +22,9 @@ export class UsersServiceService {
 
   
    registerUser(user1:User):Observable<string>{
-  this.msg= this.http.post<string>(this.restApiUrl+"/add" ,user1, {  responseType: 'text' as 'json'  });
-  alert(JSON.stringify(this.msg));
-  return this.msg;
+    return  this.http.post<string>(this.restApiUrl+"/add" ,user1, {  responseType: 'text' as 'json'  });
+
+  
     }
 
     loginCheck(userobject:User):Observable<string | User>
@@ -40,14 +40,14 @@ export class UsersServiceService {
 
     getAllUsers():Observable<User>{
       return this.http.get<User>(this.restApiUrl+'/alluser');
-      }
-     
+    }
         deleteUser1(id:Number):Observable<User>{
           return this.http.delete<any>(this.restApiUrl+"/delete?id="+id,{  responseType: 'text' as 'json'  });
           }
           getUserById(id:number):Observable<User>{
             return this.http.get<User>(this.restApiUrl+"/bypk/"+id);
-            }
+          }
+            
             getUserByLoginId(loginId:string):Observable<User>{
               return this.http.get<User>(this.restApiUrl+"/bylogin/"+loginId);
               }
@@ -64,7 +64,18 @@ export class UsersServiceService {
                   return this.http.get<OrderModel[]>("http://localhost:8093/Order/bookproducts/byPk/"+id);
                 }
                 searchUser(loginId:string):Observable<User[]>{
-                  return this.http.get<User[]>(this.restApiUrl+"/bylogin/"+loginId);
-                }
+                  return this.http.get<User[]>(this.restApiUrl+"/bylogin/"+loginId);}
+
+                  changePassword(login:string,oldpass:string,newpass:string):Observable<string>{
+                    return this.http.get<string>(this.restApiUrl+"/changepassword/"+login+"/"+oldpass+"/"+newpass,{ responseType: 'text' as 'json'  });
+                  }
+
+                  forgetPassword(login:string,otp:number):Observable<string>{
+                    return this.http.get<string>(this.restApiUrl+"/forget/"+login+"/"+otp,{ responseType: 'text' as 'json'  });
+                  }
+
+                  resetPassword(login:string,newpass:string):Observable<string>{
+                    return this.http.get<string>(this.restApiUrl+"/resetpassword/"+login+"/"+newpass,{ responseType: 'text' as 'json'  });
+                  }
       }
       

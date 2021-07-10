@@ -11,7 +11,9 @@ import { OrderServicesService } from '../OrderService/order-services.service';
 export class OrderListComponent implements OnInit {
   orderList:OrderModel[]=[];
   id:number=0;
-  orderObj:OrderModel=new OrderModel();;
+  orderObj:OrderModel=new OrderModel();
+  errorMsg: string='';
+;
 
   constructor(private service:OrderServicesService,private router:Router) {
 
@@ -39,21 +41,24 @@ loadData(){
     this.service.deleteOrder(id).subscribe(
       (data:any)=>{
         alert("Deleted !!!")
+        this.ngOnInit();
       }
     );
     
     }
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-          this.router.onSameUrlNavigation = 'reload';
-          this.router.navigate(['orderlist']);
+
     }
     search(){
       this.orderList=[];
       this.service.searchOrder(this.orderObj.id).subscribe(
         (data:any)=>{
            this.orderList.push(data);
-          //this.orderList=data;
-          alert(JSON.stringify(data));
+
+        },
+        error=>{
+          console.log(error.error)
+          this.errorMsg=error.error;
+          
         }
       );
        

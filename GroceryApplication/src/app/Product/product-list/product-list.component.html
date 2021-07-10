@@ -7,6 +7,8 @@
       aria-describedby="search-addon" />
     </div>
     <button type="button" (click)="search()" class="btn btn-outline-primary">search</button>
+  
+    <p  class="alert-danger">{{errorMsg}}</p>
   </div>
   
      <table class="table table-bordered table-primary text-center">
@@ -17,14 +19,14 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://sc04.alicdn.com/kf/UTB8L4HPotnJXKJkSaiyq6AhwXXam.jpg" alt="Card image cap">
+            <img class="card-img-top" [src]="'data:image/jpeg;base64,'+productObj.image" alt="Product Image">
             <div class="card-body">
               <h5 class="card-title">{{productObj.name}}</h5>
               <p class="card-text">Product Code:{{productObj.code}}</p>
               <p class="card-text" >Stock:{{productObj.quantity}}</p>
               <p class="card-text">Price:{{productObj.price}}</p>
           <button href="#" class="btn btn-primary"  [ngStyle]="{'background-color':success === true ? 'red' : 'blue' }" *ngIf="checkProduct(productObj.quantity)" [disabled]="success" routerLink="/order/{{productObj.id}}" >{{stockStatus}}</button>
-       
+          <input type="button" (click)="cartFunction(productObj.code)" value="Add to Cart">
         </div>
          
           </div>

@@ -17,5 +17,6 @@ export class OrderModel {
   quantity: number=0;
   state: string='';
   user:User = new User();
+  status:number=1;
   
 }

@@ -5,4 +5,5 @@ export class ProductModel {
   name:string='';
   price:string='';
   quantity:number=0; 
+  image:string='';
 }
