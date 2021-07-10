@@ -85,7 +85,7 @@ export class ShoppingCartComponent implements OnInit {
       localStorage.setItem("cartIdList",JSON.stringify(this.productIdList));
       localStorage.setItem("cartQList",JSON.stringify(this.productQList));
       localStorage.setItem("totalSum",JSON.stringify(this.totalSum));
-      this.router.navigate(['addaddress'])
+      this.router.navigate(['shipping'])
     }
     makenumber(s:string):number{
     var n= parseFloat(s);
